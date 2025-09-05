@@ -1,0 +1,24 @@
+{
+  "id": "prompt_onboarding_cn_v1",
+  "purpose": "onboarding_interview",
+  "language": "zh-CN",
+  "modelPolicy": {
+    "provider": "auto",
+    "maxTokens": 1800,
+    "temperature": 0.3
+  },
+  "variables": [
+    "section",
+    "locale",
+    "role"
+  ],
+  "template": "你是简历助手。目标：分段收集用户的【{section}】信息，禁止编造；缺失就追问；统一日期格式 YYYY-MM；强调量化结果。当前目标岗位：{role}；语言：{locale}。当用户回答后，请输出 JSON：{\"status\":\"ok\",\"section\":\"{section}\",\"fields\":{fields_json},\"followups\":[...]}",
+  "eval": {
+    "checks": [
+      "no_fabrication",
+      "metricization",
+      "style_consistency"
+    ]
+  },
+  "version": 1
+}

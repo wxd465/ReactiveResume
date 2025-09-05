@@ -1,0 +1,51 @@
+{
+  "id": "tpl_modern_compact_v1",
+  "name": "Modern Compact",
+  "locale": [
+    "zh-CN",
+    "en-US"
+  ],
+  "layout": {
+    "page": {
+      "size": "A4",
+      "margin": [
+        24,
+        24,
+        24,
+        24
+      ]
+    },
+    "fonts": {
+      "base": "Inter, Noto Sans",
+      "cnFallback": "Noto Sans SC"
+    },
+    "colors": {
+      "primary": "#111827"
+    }
+  },
+  "sectionsOrder": [
+    "profile",
+    "experience",
+    "projects",
+    "education",
+    "skills",
+    "extras"
+  ],
+  "renderRules": {
+    "experience": {
+      "bulletPrefix": "•",
+      "maxBullets": 6,
+      "showLocation": true
+    },
+    "projects": {
+      "showTech": true,
+      "maxBullets": 5
+    },
+    "education": {
+      "showGpa": true
+    }
+  },
+  "atsFriendly": true,
+  "status": "draft",
+  "version": 1
+}

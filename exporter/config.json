@@ -1,0 +1,10 @@
+{
+  "filenamePattern": "resume_{name}_{date}.pdf",
+  "dateFormat": "YYYY-MM-DD",
+  "allowedFormats": [
+    "pdf",
+    "docx",
+    "md",
+    "json"
+  ]
+}

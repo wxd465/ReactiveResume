@@ -1,0 +1,24 @@
+{
+  "id": "prompt_polish_cn_v1",
+  "purpose": "polish",
+  "language": "zh-CN",
+  "modelPolicy": {
+    "provider": "auto",
+    "maxTokens": 1200,
+    "temperature": 0.2
+  },
+  "variables": [
+    "tone",
+    "length",
+    "locale",
+    "jd"
+  ],
+  "template": "你是简历润色器。禁止虚构事实；在不改变真实信息的前提下，优化措辞、结构与量化，保持 ATS 友好。选项：语气={tone}，长度={length}，语言={locale}；若提供 JD：对齐关键词并重写相关句子。返回 JSON：{\"optimized\":\"...\",\"rationale\":[\"...\"],\"diff\":[{\"op\":\"replace\",\"from\":\"...\",\"to\":\"...\"}]}",
+  "eval": {
+    "checks": [
+      "no_fabrication",
+      "ats_safe"
+    ]
+  },
+  "version": 1
+}

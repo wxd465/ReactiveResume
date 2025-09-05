@@ -1,0 +1,22 @@
+{
+  "id": "prompt_jd_align_cn_v1",
+  "purpose": "jd_align",
+  "language": "zh-CN",
+  "modelPolicy": {
+    "provider": "auto",
+    "maxTokens": 1200,
+    "temperature": 0.2
+  },
+  "variables": [
+    "jd_text",
+    "resume_section"
+  ],
+  "template": "根据 JD：{jd_text}，对 {resume_section} 执行关键词映射与轻度改写，禁止新增未提供的事实。只返回改写后的段落文本。",
+  "eval": {
+    "checks": [
+      "no_fabrication",
+      "keyword_coverage"
+    ]
+  },
+  "version": 1
+}
